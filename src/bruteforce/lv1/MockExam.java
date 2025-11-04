@@ -1,4 +1,4 @@
-package exhaustive.lv1;
+package bruteforce.lv1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 
 /** 모의고사 - 프로그래머스 42840
  *
- * 문제 유형 : 완전 탐색
+ * 문제 유형 : 완전탐색 (Brute Force)
  */
 public class MockExam {
 
