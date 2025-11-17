@@ -22,33 +22,38 @@ public class Clustering {
         allKeys.addAll(map2.keySet());
 
         int kyo = 0;
-        int union = 0;
+        int hap = 0;
         int base = 65536;
+
+        // 모두 공집합일 경우: 65536
+        if(allKeys .isEmpty()) return base;
 
         // 교집합
         for(String key : allKeys) {
             int cnt1 = map1. getOrDefault(key, 0);
             int cnt2 = map2. getOrDefault(key, 0);
 
-            kyo += Math.min(cnt1, cnt2);   // 교집합: min >= 0 (둘 중 하나라도 없으면 0)
-            union += Math.max(cnt1, cnt2); // 합집합: max >= 1
+            kyo += Math.min(cnt1, cnt2); // 교집합: min >= 0 (둘 중 하나라도 없으면 0)
+            hap += Math.max(cnt1, cnt2); // 합집합: max >= 1
         }
-        // 모두 공집합일 경우: 65536
-        if(union == 0) return base;
 
         // 자카드 = 교집합 / 합집합 * 65536
-        double jacard = (double) kyo / union;
-        return (int)(jacard * base);
+        return (int) ((double) kyo / hap * base);
     }
 
     // n-gram 멀티셋
     private Map<String, Integer> getStrMap(String str) {
         Map<String, Integer> map = new HashMap<>();
 
+        str = str.toLowerCase();
+
         for(int i = 0; i < str.length() - 1; i++) {
-            String sub = str.substring(i, i + 2).toLowerCase();
-            if(sub.matches("[a-z]{2}")) { // 소문자 2글자
-                map.put(sub, map.getOrDefault(sub, 0) + 1);
+            char c1 = str.charAt(i);
+            char c2 = str.charAt(i + 1);
+
+            if(Character.isLowerCase(c1) && Character.isLowerCase(c2)) {
+                String word = "" + c1 + c2;
+                map.put(word, map.getOrDefault(word, 0) + 1);
             }
         }
         return map;
