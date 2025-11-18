@@ -32,7 +32,7 @@ public class StringCompression {
                 loop++; // 반복 증가
             } else {
                 // 반복 끝났을 때 길이 누적
-                cnt += div; // 문자의 길이
+                cnt += pre.length(); // 문자의 길이
                 if (loop > 1) cnt += String.valueOf(loop).length(); // 반복 숫자 길이
                 pre = cur;
                 loop = 1;
