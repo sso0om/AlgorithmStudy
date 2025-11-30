@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-/** 파일명 정렬 - 프로그래머스 42586
+/** 기능 개발 - 프로그래머스 42586
  *
  * 문제 유형 : Queue, 구현
  */
