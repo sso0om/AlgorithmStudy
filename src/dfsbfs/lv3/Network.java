@@ -1,11 +1,11 @@
-package dfsbfs.lv2;
+package dfsbfs.lv3;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
 
 /** 네트워크 - 프로그래머스 43162
  *
- * 문제 유형 : DFS, Graph, 그래프 DFS, 그래프 BFS 인접 행렬
+ * 문제 유형 : DFS, Graph, BFS, 인접 행렬
  */
 public class Network {
 
