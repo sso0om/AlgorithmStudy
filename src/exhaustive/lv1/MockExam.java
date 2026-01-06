@@ -1,4 +1,4 @@
-package bruteforce.lv1;
+package exhaustive.lv1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,10 +45,7 @@ public class MockExam {
                 .toArray();
     }
 
-    
-    
-    
-    
+
     // 2. Stream 기반 점수 계산
     // 시간 복잡도 : O(n)
     // - 가장 선언적, 다소 느림, 오버헤드 있음
@@ -81,9 +78,6 @@ public class MockExam {
                 .map(i -> i + 1)
                 .toArray();
     }
-
-
-
 
 
     // 3. loop + List
