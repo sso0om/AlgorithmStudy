@@ -1,4 +1,4 @@
-package exhaustive.lv1;
+package simulation.lv1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
